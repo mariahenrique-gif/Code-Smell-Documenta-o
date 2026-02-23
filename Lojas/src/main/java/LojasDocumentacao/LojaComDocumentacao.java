@@ -3,13 +3,14 @@ package LojasDocumentacao;
 import java.util.List;
 import java.util.Map;
 
-// ESTA CLASSE REPRESENTA UMA LOJA ONLINE SIMPLES
+// ESTA CLASSE REPRESENTA UMA LOJA ONLINE SIMPLES COM METODOS SIMPLES
+// DE CALCULO DE PRODUTOS E APRESENTAÇÃO DE RESULTADO
 
 public class LojaComDocumentacao {
 
         private List<String> produtos;
         private Map<String, Double> precos;
-
+// Lista de produtos disponíveis na loja
         public LojaComDocumentacao(List<String> produtos, Map<String, Double> precos) {
             this.produtos = produtos;
             this.precos = precos;
@@ -26,7 +27,7 @@ public class LojaComDocumentacao {
             }
             return total;
         }
-        //
+        // Imprime o catalogo de produtos apresentando seus preços
         public void imprimirCatalogo() {
             for (String produto : produtos) {
                 System.out.println(produto + " -> " + precos.getOrDefault(produto, 0.0));

@@ -1,0 +1,14 @@
+//# Loja Online em Java
+
+//Este repositório contém duas versões da classe `Loja` em Java:
+
+//- Versão sem comentários
+//- Versão comentada
+
+//## Funcionalidades
+//- Armazena produtos e preços.
+//- Calcula o valor total com desconto.
+//- Imprime catálogo de produtos.
+
+//## Objetivo
+//Comparar código sem documentação com código comentado, destacando a importância de escrever comentários claros.

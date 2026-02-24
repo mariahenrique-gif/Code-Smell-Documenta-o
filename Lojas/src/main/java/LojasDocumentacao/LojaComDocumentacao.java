@@ -3,32 +3,30 @@ package LojasDocumentacao;
 import java.util.List;
 import java.util.Map;
 
-// ESTA CLASSE REPRESENTA UMA LOJA ONLINE SIMPLES COM METODOS SIMPLES
-// DE CALCULO DE PRODUTOS E APRESENTAÇÃO DE RESULTADO
 
-public class LojaComDocumentacao {
+public class Loja {
 
         private List<String> produtos;
         private Map<String, Double> precos;
-// Lista de produtos disponíveis na loja
-        public LojaComDocumentacao(List<String> produtos, Map<String, Double> precos) {
+
+     
+        public Loja(List<String> produtos, Map<String, Double> precos) {
             this.produtos = produtos;
             this.precos = precos;
         }
-        //Metodo para calcular o valor total dos produtos e aplicando descontos
-        public double calcularTotal() {
+        
+        public double calcular() {
             double total = 0;
             for (String produto : produtos) {
                 if (precos.containsKey(produto)) {
-                    total += precos.get(produto) * 0.85; //15 Desconto
+                    total += precos.get(produto) * 0.85; 
                 } else {
-                    total += 1.99; // Valor do produto
+                    total += 1.99; 
                 }
             }
             return total;
         }
-        // Imprime o catalogo de produtos apresentando seus preços
-        public void imprimirCatalogo() {
+        public void imprimir() {
             for (String produto : produtos) {
                 System.out.println(produto + " -> " + precos.getOrDefault(produto, 0.0));
             }
